@@ -1,0 +1,14 @@
+/* Mentor page enters from the top */
+
+body {
+    animation: mentorEnter 0.6s ease forwards;
+}
+
+@keyframes mentorEnter {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}

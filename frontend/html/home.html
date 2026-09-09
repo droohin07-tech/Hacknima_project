@@ -6,6 +6,9 @@
     <title>AlumnComi</title>
     <link rel="stylesheet" href="/frontend/css/home.css"> <!--External CSS file-->
     <script src="/frontend/app.js" defer></script> <!--External JavaScript file-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quantico:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 </head>
 <body>
     <flex-container class="header">
@@ -18,15 +21,17 @@
     </flex-container>
 
     <flex-container class="login-options">
-        <flex-item>
-            <a href="/frontend/html/student_login.html" class="login-button">Student Login</a>
-        </flex-item>
-        <flex-item>
-            <a href="/frontend/html/hiring_login.html" class="login-button">Hiring Manager Login</a>
-        </flex-item>
-        <flex-item>
-            <a href="/frontend/html/mentor_login.html" class="login-button">Mentor Login</a>
-        </flex-item>
+        <div class="login-container">
+            <a href="/frontend/html/student_login.html" class="login-box">
+                <h2>Student Login</h2>
+            </a>
+            <a href="/frontend/html/mentor_login.html" class="login-box">
+                <h2>Mentor Login</h2>
+            </a>
+            <a href="/frontend/html/hiring_login.html" class="login-box">
+                <h2>Hiring Manager Login</h2>
+            </a>
+        </div>
     </flex-container>
 </body>
 </html>

@@ -1,0 +1,14 @@
+/* Student page enters from the left */
+
+body {
+    animation: studentEnter 0.6s ease forwards;
+}
+
+@keyframes studentEnter {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
