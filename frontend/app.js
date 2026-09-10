@@ -49,3 +49,30 @@ window.addEventListener("pageshow", function () {
         sessionStorage.removeItem("transitionDirection");
     }
 });
+
+// ================================
+// LOGIN / SIGN UP
+// ================================
+
+const loginTab = document.getElementById("loginTab");
+const signupTab = document.getElementById("signupTab");
+const loginForm = document.getElementById("loginForm");
+const signupForm = document.getElementById("signupForm");
+
+if (loginTab && signupTab && loginForm && signupForm) {
+    loginTab.addEventListener("click", function() {
+        loginForm.hidden = false;
+        signupForm.hidden = true;
+
+        loginTab.classList.add("active");
+        signupTab.classList.remove("active");
+    });
+
+    signupTab.addEventListener("click", function() {
+        loginForm.hidden = true;
+        signupForm.hidden = false;
+
+        signupTab.classList.add("active");
+        loginTab.classList.remove("active");
+    });
+}
