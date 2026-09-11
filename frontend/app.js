@@ -76,3 +76,51 @@ if (loginTab && signupTab && loginForm && signupForm) {
         loginTab.classList.remove("active");
     });
 }
+
+//Sudent home page
+
+document.addEventListener("DOMContentLoaded", function() {
+    const dashboardOptions = document.querySelectorAll(".dashboard-option");
+    const dashboardSections = document.querySelectorAll(".dashboard-section");
+
+    dashboardOptions.forEach(function(option) {
+        option.addEventListener("click", function() {
+            const selectedSection = option.getAttribute("data-section");
+
+            dashboardOptions.forEach(function(button) {
+                button.classList.remove("active");
+            });
+
+            dashboardSections.forEach(function(section) {
+                section.hidden = true;
+            });
+
+            option.classList.add("active");
+
+            const sectionToShow = document.getElementById(selectedSection);
+
+            if (sectionToShow) {
+                sectionToShow.hidden = false;
+            }
+        });
+    });
+});
+
+const internshipSearch = document.getElementById("internshipSearch");
+const internshipCards = document.querySelectorAll(".internship-card");
+
+if (internshipSearch) {
+    internshipSearch.addEventListener("input", function() {
+        const searchTerm = internshipSearch.value.toLowerCase().trim();
+
+        internshipCards.forEach(function(card) {
+            const cardText = card.textContent.toLowerCase();
+
+            if (cardText.includes(searchTerm)) {
+                card.style.display = "";
+            } else {
+                card.style.display = "none";
+            }
+        });
+    });
+}

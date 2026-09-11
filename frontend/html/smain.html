@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AlumnComi</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quantico:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/frontend/css/shome.css">
+    <script src="/frontend/app.js"></script>
+</head>
+<body>
+
+    <header class="top-bar">
+        <div class="brand-name">AlumnComi</div>
+
+        <nav class="top-navigation">
+            <a href="#">Student Profile</a>
+            <a href="#">Settings</a>
+            <a href="#">Logout</a>
+        </nav>
+    </header>
+
+
+    <main class="dashboard-container">
+
+        <section class="dashboard-navigation">
+            <button type="button" class="dashboard-option active" data-section="internships">
+                INTERNSHIPS
+            </button>
+
+            <button type="button" class="dashboard-option" data-section="student-help">
+                STUDENT HELP
+            </button>
+
+            <button type="button" class="dashboard-option" data-section="skill-rating">
+                SKILL RATING
+            </button>
+        </section>
+
+        
+
+        <section id="student-help" class="dashboard-section" hidden>
+            <h1>Student Help</h1>
+            <p>Connect with student communities and mentors for guidance.</p>
+        </section>
+
+        <section id="skill-rating" class="dashboard-section" hidden>
+            <h1>Skill Rating</h1>
+            <p>Assess your current skills and identify areas for improvement.</p>
+        </section>
+
+    <section id="internships" class="dashboard-section">
+        <div class="section-heading">
+            <div>
+                <h1>Internships</h1>
+                <p>Find internship opportunities that match your interests and skills.</p>
+            </div>
+
+            <input
+            type="search"
+            id="internshipSearch"
+            class="search-input"
+            placeholder="Search internships..."
+            >
+        </div>
+
+        <div class="internship-grid">
+
+            <article class="internship-card">
+                <div class="internship-card-header">
+                    <span class="internship-tag">TECHNOLOGY</span>
+                    <span class="internship-mode">Remote</span>
+                </div>
+
+                <h2>Frontend Development Intern</h2>
+
+                <p class="company-name">NovaTech Solutions</p>
+
+                <div class="internship-details">
+                    <span>📍 Remote</span>
+                    <span>⏳ 3 months</span>
+                </div>
+
+                <p class="internship-description">
+                Work on responsive web interfaces using HTML, CSS, and JavaScript.
+                </p>
+
+                <button type="button" class="apply-button">VIEW DETAILS</button>
+            </article>
+
+            <article class="internship-card">
+                <div class="internship-card-header">
+                    <span class="internship-tag">PYTHON</span>
+                    <span class="internship-mode">Hybrid</span>
+                </div>
+
+                <h2>Python Developer Intern</h2>
+
+                <p class="company-name">CodeBridge Labs</p>
+
+                <div class="internship-details">
+                    <span>📍 Bengaluru</span>
+                    <span>⏳ 2 months</span>
+                </div>
+
+                <p class="internship-description">
+                    Assist with Python-based backend development and database integration.
+                </p>
+
+                <button type="button" class="apply-button">
+                    VIEW DETAILS
+                </button>
+            </article>
+
+            <article class="internship-card">
+                <div class="internship-card-header">
+                    <span class="internship-tag">DESIGN</span>
+                    <span class="internship-mode">On-site</span>
+                </div>
+
+                <h2>Graphic Design Intern</h2>
+
+                <p class="company-name">PixelCraft Studio</p>
+
+                <div class="internship-details">
+                    <span>📍 Chennai</span>
+                    <span>⏳ 1 month</span>
+                </div>
+
+                <p class="internship-description">
+                Create social media graphics, promotional material, and brand assets.
+                </p>
+
+                <button type="button" class="apply-button">VIEW DETAILS</button>
+            </article>
+
+        </div>
+    </section>
+
+    <section id="student-help" class="dashboard-section" hidden>
+        <h1>Student Help</h1>
+        <p>Connect with student communities and mentors for guidance.</p>
+    </section>
+
+    <section id="skill-rating" class="dashboard-section" hidden>
+        <h1>Skill Rating</h1>
+        <p>Assess your current skills and identify areas for improvement.</p>
+    </section>
+    </main>
+</body>
+</html>
