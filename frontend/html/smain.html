@@ -4,20 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>AlumnComi</title>
+    <title>AlumnComi | Student Dashboard</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Quantico:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/frontend/css/shome.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Quantico:wght@400;700&display=swap"
+        rel="stylesheet"
+    >
     <script src="/frontend/app.js"></script>
+    <link rel="stylesheet" href="/frontend/css/shome.css">
 </head>
 <body>
 
-    <header class="top-bar">
-        <div class="brand-name">AlumnComi</div>
+    <!-- =========================
+         Top Navigation
+    ========================== -->
 
-        <nav class="top-navigation">
+    <header class="top-bar">
+        <h1 class="logo">AlumnComi</h1>
+
+        <nav class="top-links">
             <a href="#">Student Profile</a>
             <a href="#">Settings</a>
             <a href="#">Logout</a>
@@ -25,131 +32,728 @@
     </header>
 
 
+    <!-- =========================
+         Main Dashboard
+    ========================== -->
+
     <main class="dashboard-container">
 
-        <section class="dashboard-navigation">
-            <button type="button" class="dashboard-option active" data-section="internships">
+        <!-- Dashboard Tabs -->
+
+        <nav class="dashboard-navigation">
+            <button
+                class="dashboard-option active"
+                data-section="internships"
+                type="button"
+            >
                 INTERNSHIPS
             </button>
 
-            <button type="button" class="dashboard-option" data-section="student-help">
+            <button
+                class="dashboard-option"
+                data-section="student-help"
+                type="button"
+            >
                 STUDENT HELP
             </button>
 
-            <button type="button" class="dashboard-option" data-section="skill-rating">
+            <button
+                class="dashboard-option"
+                data-section="skill-rating"
+                type="button"
+            >
                 SKILL RATING
             </button>
-        </section>
+        </nav>
 
-        
 
-        <section id="student-help" class="dashboard-section" hidden>
-            <h1>Student Help</h1>
-            <p>Connect with student communities and mentors for guidance.</p>
-        </section>
+        <!-- =========================
+             Internship Portal Tab
+        ========================== -->
 
-        <section id="skill-rating" class="dashboard-section" hidden>
-            <h1>Skill Rating</h1>
-            <p>Assess your current skills and identify areas for improvement.</p>
-        </section>
+        <section
+            id="internships"
+            class="dashboard-section"
+        >
+            <p class="eyebrow">DISCOVER · APPLY · GROW</p>
 
-    <section id="internships" class="dashboard-section">
-        <div class="section-heading">
-            <div>
-                <h1>Internships</h1>
-                <p>Find internship opportunities that match your interests and skills.</p>
+            <h2 class="section-heading">Internship Portal</h2>
+
+            <p class="section-description">
+                Find opportunities that match your interests, skills, and career goals.
+            </p>
+
+            <div class="internship-toolbar">
+                <input
+                    type="search"
+                    id="internshipSearch"
+                    class="search-input"
+                    placeholder="Search by role, company, or location..."
+                >
+
+                <select id="internshipType" class="filter-select">
+                    <option value="all">All Types</option>
+                    <option value="remote">Remote</option>
+                    <option value="hybrid">Hybrid</option>
+                    <option value="onsite">On-site</option>
+                </select>
             </div>
 
-            <input
-            type="search"
-            id="internshipSearch"
-            class="search-input"
-            placeholder="Search internships..."
-            >
-        </div>
 
-        <div class="internship-grid">
+            <div class="internship-grid">
 
-            <article class="internship-card">
-                <div class="internship-card-header">
-                    <span class="internship-tag">TECHNOLOGY</span>
-                    <span class="internship-mode">Remote</span>
+                <!-- Internship 1 -->
+
+                <article
+                    class="internship-card"
+                    data-type="remote"
+                >
+                    <p class="internship-type">REMOTE · 3 MONTHS</p>
+
+                    <h3>Frontend Development Intern</h3>
+
+                    <p class="internship-company">
+                        NovaTech Solutions
+                    </p>
+
+                    <p class="internship-location">
+                        Remote Frontend Paid
+                    </p>
+
+                    <p class="internship-description">
+                        Work with a development team to build responsive interfaces
+                        and improve user experiences.
+                    </p>
+
+                    <div class="internship-meta">
+                        <span>India</span>
+                        <span>Remote</span>
+                    </div>
+
+                    <button
+                        class="primary-button apply-button"
+                        type="button"
+                    >
+                        APPLY
+                    </button>
+                </article>
+
+
+                <!-- Internship 2 -->
+
+                <article
+                    class="internship-card"
+                    data-type="hybrid"
+                >
+                    <p class="internship-type">HYBRID · 2 MONTHS</p>
+
+                    <h3>Python Development Intern</h3>
+
+                    <p class="internship-company">
+                        CodeBridge Labs
+                    </p>
+
+                    <p class="internship-location">
+                        Bengaluru Python Backend
+                    </p>
+
+                    <p class="internship-description">
+                        Assist in building backend services, APIs, database-driven
+                        applications, and automation tools.
+                    </p>
+
+                    <div class="internship-meta">
+                        <span>Bengaluru, India</span>
+                        <span>Hybrid</span>
+                    </div>
+
+                    <button
+                        class="primary-button apply-button"
+                        type="button"
+                    >
+                        APPLY
+                    </button>
+                </article>
+
+
+                <!-- Internship 3 -->
+
+                <article
+                    class="internship-card"
+                    data-type="onsite"
+                >
+                    <p class="internship-type">ON-SITE · 1 MONTH</p>
+
+                    <h3>Graphic Design Intern</h3>
+
+                    <p class="internship-company">
+                        PixelCraft Studio
+                    </p>
+
+                    <p class="internship-location">
+                        Chennai Design Paid
+                    </p>
+
+                    <p class="internship-description">
+                        Create branding materials, social media graphics, marketing
+                        visuals, and campaign designs.
+                    </p>
+
+                    <div class="internship-meta">
+                        <span>Chennai, India</span>
+                        <span>On-site</span>
+                    </div>
+
+                    <button
+                        class="primary-button apply-button"
+                        type="button"
+                    >
+                        APPLY
+                    </button>
+                </article>
+
+            </div>
+        </section>
+
+
+        <!-- =========================
+             Student Help Tab
+        ========================== -->
+
+        <section
+            id="student-help"
+            class="dashboard-section"
+            hidden
+        >
+            <p class="eyebrow">CONNECT · COLLABORATE · LEARN</p>
+
+            <h2 class="section-heading">Student Help</h2>
+
+            <p class="section-description">
+                Connect with student communities and experienced mentors.
+            </p>
+
+
+            <div class="help-split-layout">
+
+                <!-- =========================
+                     Student Community Panel
+                ========================== -->
+
+                <div class="help-panel">
+
+                    <div class="panel-heading">
+                        <div>
+                            <h3>Student Community</h3>
+
+                            <p>
+                                Join discussions, find teammates, and share knowledge.
+                            </p>
+                        </div>
+
+                        <button
+                            id="createPostButton"
+                            class="primary-button"
+                            type="button"
+                        >
+                            CREATE POST
+                        </button>
+                    </div>
+
+
+                    <div class="community-layout">
+
+                        <!-- Community Sidebar -->
+
+                        <aside class="community-sidebar">
+
+                            <button
+                                class="community-link active"
+                                data-community="all-discussions"
+                                type="button"
+                            >
+                                All Discussions
+                            </button>
+
+                            <button
+                                class="community-link"
+                                data-community="web-development"
+                                type="button"
+                            >
+                                Web Development
+                            </button>
+
+                            <button
+                                class="community-link"
+                                data-community="python-backend"
+                                type="button"
+                            >
+                                Python & Backend
+                            </button>
+
+                            <button
+                                class="community-link"
+                                data-community="design-creativity"
+                                type="button"
+                            >
+                                Design & Creativity
+                            </button>
+
+                            <button
+                                class="community-link"
+                                data-community="hackathons"
+                                type="button"
+                            >
+                                Hackathons
+                            </button>
+
+                            <button
+                                class="community-link"
+                                data-community="career-internships"
+                                type="button"
+                            >
+                                Career & Internships
+                            </button>
+
+                        </aside>
+
+
+                        <!-- Community Discussion Feed -->
+
+                        <div class="community-feed">
+
+                            <article class="discussion-card">
+                                <h4>
+                                    Looking for teammates for a hackathon
+                                </h4>
+
+                                <p>
+                                    Looking for someone interested in backend development
+                                    and database design.
+                                </p>
+
+                                <div class="discussion-meta">
+                                    <span>12 replies</span>
+                                    <span>2 hours ago</span>
+                                </div>
+                            </article>
+
+
+                            <article class="discussion-card">
+                                <h4>
+                                    Best resources to learn React?
+                                </h4>
+
+                                <p>
+                                    Sharing beginner-friendly resources for learning
+                                    React and building practical projects.
+                                </p>
+
+                                <div class="discussion-meta">
+                                    <span>8 replies</span>
+                                    <span>5 hours ago</span>
+                                </div>
+                            </article>
+
+
+                            <article class="discussion-card">
+                                <h4>
+                                    Internship resume review
+                                </h4>
+
+                                <p>
+                                    Students are helping each other improve their resumes
+                                    and prepare for upcoming interviews.
+                                </p>
+
+                                <div class="discussion-meta">
+                                    <span>19 replies</span>
+                                    <span>Yesterday</span>
+                                </div>
+                            </article>
+
+                        </div>
+
+                    </div>
+
                 </div>
 
-                <h2>Frontend Development Intern</h2>
 
-                <p class="company-name">NovaTech Solutions</p>
+                <!-- =========================
+                     Mentor Panel
+                ========================== -->
 
-                <div class="internship-details">
-                    <span>📍 Remote</span>
-                    <span>⏳ 3 months</span>
+                <div class="help-panel">
+
+                    <div class="panel-heading">
+                        <div>
+                            <h3>Find a Mentor</h3>
+
+                            <p>
+                                Get guidance from people with practical experience.
+                            </p>
+                        </div>
+                    </div>
+
+
+                    <div class="mentor-filters">
+
+                        <input
+                            type="search"
+                            id="mentorSearch"
+                            class="search-input"
+                            placeholder="Search mentors..."
+                        >
+
+                        <select
+                            id="mentorCategory"
+                            class="filter-select"
+                        >
+                            <option value="all">All Categories</option>
+                            <option value="frontend">Frontend</option>
+                            <option value="backend">Backend</option>
+                            <option value="design">Design</option>
+                        </select>
+
+                    </div>
+
+
+                    <div class="mentor-grid">
+
+                        <!-- Mentor 1 -->
+
+                        <article
+                            class="mentor-card"
+                            data-name="Rahul Sharma"
+                            data-skills="HTML CSS JavaScript React frontend portfolio"
+                            data-category="frontend"
+                        >
+                            <div class="mentor-avatar">RS</div>
+
+                            <h4>Rahul Sharma</h4>
+
+                            <p class="mentor-role">
+                                Frontend Developer
+                            </p>
+
+                            <p class="mentor-skills">
+                                HTML · CSS · JavaScript · React
+                            </p>
+
+                            <button
+                                class="secondary-button mentor-button"
+                                type="button"
+                            >
+                                VIEW PROFILE
+                            </button>
+                        </article>
+
+
+                        <!-- Mentor 2 -->
+
+                        <article
+                            class="mentor-card"
+                            data-name="Meera Nair"
+                            data-skills="Python Flask API backend SQL databases"
+                            data-category="backend"
+                        >
+                            <div class="mentor-avatar">MN</div>
+
+                            <h4>Meera Nair</h4>
+
+                            <p class="mentor-role">
+                                Backend Engineer
+                            </p>
+
+                            <p class="mentor-skills">
+                                Python · Flask · APIs · SQL
+                            </p>
+
+                            <button
+                                class="secondary-button mentor-button"
+                                type="button"
+                            >
+                                VIEW PROFILE
+                            </button>
+                        </article>
+
+
+                        <!-- Mentor 3 -->
+
+                        <article
+                            class="mentor-card"
+                            data-name="Aditya Menon"
+                            data-skills="Product design graphic design branding creativity"
+                            data-category="design"
+                        >
+                            <div class="mentor-avatar">AM</div>
+
+                            <h4>Aditya Menon</h4>
+
+                            <p class="mentor-role">
+                                Product & Design Mentor
+                            </p>
+
+                            <p class="mentor-skills">
+                                Product · Branding · Design
+                            </p>
+
+                            <button
+                                class="secondary-button mentor-button"
+                                type="button"
+                            >
+                                VIEW PROFILE
+                            </button>
+                        </article>
+
+                    </div>
+
                 </div>
 
-                <p class="internship-description">
-                Work on responsive web interfaces using HTML, CSS, and JavaScript.
-                </p>
+            </div>
+        </section>
 
-                <button type="button" class="apply-button">VIEW DETAILS</button>
-            </article>
 
-            <article class="internship-card">
-                <div class="internship-card-header">
-                    <span class="internship-tag">PYTHON</span>
-                    <span class="internship-mode">Hybrid</span>
+        <!-- =========================
+             Skill Rating Tab
+        ========================== -->
+
+        <section
+            id="skill-rating"
+            class="dashboard-section"
+            hidden
+        >
+            <p class="eyebrow">SHOW YOUR WORK · GET EVALUATED</p>
+
+            <h2 class="section-heading">Skill Rating</h2>
+
+            <p class="section-description">
+                Submit a project through a file upload or a public GitHub repository.
+            </p>
+
+
+            <div class="skill-rating-layout">
+
+                <!-- File Upload Panel -->
+
+                <div class="skill-panel">
+
+                    <h3>Upload Project File</h3>
+
+                    <p>
+                        Upload your project file from your system for evaluation.
+                    </p>
+
+                    <label
+                        for="projectFile"
+                        class="file-upload-box"
+                    >
+                        <strong>SELECT PROJECT FILE</strong>
+
+                        <span>
+                            Supported files can be connected to the backend later.
+                        </span>
+
+                        <input
+                            type="file"
+                            id="projectFile"
+                            class="file-upload-input"
+                            accept=".zip,.rar,.7z,.pdf,.doc,.docx"
+                        >
+                    </label>
+
+                    <p
+                        id="selectedFileName"
+                        class="selected-file-name"
+                    >
+                        No file selected
+                    </p>
+
+                    <button
+                        id="uploadProjectButton"
+                        class="primary-button"
+                        type="button"
+                    >
+                        SUBMIT FILE
+                    </button>
+
                 </div>
 
-                <h2>Python Developer Intern</h2>
 
-                <p class="company-name">CodeBridge Labs</p>
+                <!-- GitHub Panel -->
 
-                <div class="internship-details">
-                    <span>📍 Bengaluru</span>
-                    <span>⏳ 2 months</span>
+                <div class="skill-panel">
+
+                    <h3>Public GitHub Repository</h3>
+
+                    <p>
+                        Submit a link to a publicly accessible GitHub repository.
+                    </p>
+
+                    <div class="github-form">
+
+                        <label for="githubRepoLink">
+                            GITHUB REPOSITORY LINK
+                        </label>
+
+                        <input
+                            type="url"
+                            id="githubRepoLink"
+                            class="text-input"
+                            placeholder="https://github.com/username/repository"
+                        >
+
+                        <p
+                            id="githubValidationMessage"
+                            class="validation-message"
+                        ></p>
+
+                        <p class="github-help-text">
+                            The repository must be public. Private repositories
+                            cannot be accessed for evaluation.
+                        </p>
+
+                        <button
+                            id="submitGithubButton"
+                            class="primary-button"
+                            type="button"
+                        >
+                            SUBMIT GITHUB LINK
+                        </button>
+
+                    </div>
+
                 </div>
 
-                <p class="internship-description">
-                    Assist with Python-based backend development and database integration.
-                </p>
+            </div>
 
-                <button type="button" class="apply-button">
-                    VIEW DETAILS
-                </button>
-            </article>
 
-            <article class="internship-card">
-                <div class="internship-card-header">
-                    <span class="internship-tag">DESIGN</span>
-                    <span class="internship-mode">On-site</span>
-                </div>
+            <div
+                id="skillSubmissionStatus"
+                class="skill-submission-status"
+                hidden
+            ></div>
 
-                <h2>Graphic Design Intern</h2>
+        </section>
 
-                <p class="company-name">PixelCraft Studio</p>
-
-                <div class="internship-details">
-                    <span>📍 Chennai</span>
-                    <span>⏳ 1 month</span>
-                </div>
-
-                <p class="internship-description">
-                Create social media graphics, promotional material, and brand assets.
-                </p>
-
-                <button type="button" class="apply-button">VIEW DETAILS</button>
-            </article>
-
-        </div>
-    </section>
-
-    <section id="student-help" class="dashboard-section" hidden>
-        <h1>Student Help</h1>
-        <p>Connect with student communities and mentors for guidance.</p>
-    </section>
-
-    <section id="skill-rating" class="dashboard-section" hidden>
-        <h1>Skill Rating</h1>
-        <p>Assess your current skills and identify areas for improvement.</p>
-    </section>
     </main>
+
+
+    <!-- =========================
+         Community Modal
+    ========================== -->
+
+    <div
+        id="communityModal"
+        class="detail-modal"
+        hidden
+    >
+        <div class="modal-content">
+
+            <button
+                id="closeCommunityModal"
+                class="modal-close"
+                type="button"
+                aria-label="Close community modal"
+            >
+                &times;
+            </button>
+
+            <p
+                id="modalCommunityCategory"
+                class="modal-category"
+            ></p>
+
+            <h2 id="modalCommunityTitle"></h2>
+
+            <p id="modalCommunityDescription"></p>
+
+            <h3>Members</h3>
+            <p id="modalCommunityMembers"></p>
+
+            <h3>Activity</h3>
+            <p id="modalCommunityActivity"></p>
+
+            <h3>Topics</h3>
+            <ul
+                id="modalCommunityTopics"
+                class="modal-list"
+            ></ul>
+
+            <div class="modal-footer">
+                <button
+                    id="connectCommunityButton"
+                    class="connect-button"
+                    type="button"
+                >
+                    CONNECT
+                </button>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- =========================
+         Mentor Modal
+    ========================== -->
+
+    <div
+        id="mentorModal"
+        class="detail-modal"
+        hidden
+    >
+        <div class="modal-content">
+
+            <button
+                id="closeMentorModal"
+                class="modal-close"
+                type="button"
+                aria-label="Close mentor modal"
+            >
+                &times;
+            </button>
+
+            <div
+                id="modalMentorAvatar"
+                class="mentor-avatar"
+            ></div>
+
+            <p
+                id="modalMentorCategory"
+                class="modal-category"
+            ></p>
+
+            <h2 id="modalMentorTitle"></h2>
+
+            <p id="modalMentorRole"></p>
+
+            <p id="modalMentorDescription"></p>
+
+            <h3>Experience</h3>
+            <p id="modalMentorExperience"></p>
+
+            <h3>Availability</h3>
+            <p id="modalMentorAvailability"></p>
+
+            <h3>Skills</h3>
+            <ul
+                id="modalMentorSkills"
+                class="modal-list"
+            ></ul>
+
+            <div class="modal-footer">
+                <button
+                    id="connectMentorButton"
+                    class="connect-button"
+                    type="button"
+                >
+                    CONNECT
+                </button>
+            </div>
+
+        </div>
+    </div>
+
 </body>
 </html>
