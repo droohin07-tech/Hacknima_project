@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AlumnComi | Mentor Dashboard</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Quantico:wght@400;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="/frontend/css/mhome.css">
+</head>
+<body>
+
+    <!-- =========================
+         Top Navigation
+    ========================== -->
+
+    <header class="top-bar">
+        <h1 class="logo">AlumnComi</h1>
+
+        <nav class="top-links">
+            <a href="#">Mentor Profile</a>
+            <a href="#">Settings</a>
+            <a href="#">Logout</a>
+        </nav>
+    </header>
+
+
+    <!-- =========================
+         Main Dashboard
+    ========================== -->
+
+    <main class="dashboard-container">
+
+        <!-- Dashboard Tabs -->
+
+        <nav class="dashboard-navigation">
+
+            <button
+                class="dashboard-option active"
+                data-section="communities"
+                type="button"
+            >
+                COMMUNITIES
+            </button>
+
+            <button
+                class="dashboard-option"
+                data-section="my-apprentice"
+                type="button"
+            >
+                MY APPRENTICE
+            </button>
+
+            <button
+                class="dashboard-option"
+                data-section="requests"
+                type="button"
+            >
+                REQUESTS RECEIVED
+            </button>
+
+        </nav>
+
+
+        <!-- =========================
+             Communities Section
+        ========================== -->
+
+        <section
+            id="communities"
+            class="dashboard-section"
+        >
+            <p class="eyebrow">CONNECT · GUIDE · GROW</p>
+
+            <h2 class="section-heading">Communities</h2>
+
+            <p class="section-description">
+                Join communities, share your experience, and help students grow.
+            </p>
+
+
+            <div class="community-toolbar">
+
+                <input
+                    type="search"
+                    id="communitySearch"
+                    class="search-input"
+                    placeholder="Search communities..."
+                >
+
+                <select
+                    id="communityCategory"
+                    class="filter-select"
+                >
+                    <option value="all">All Categories</option>
+                    <option value="technical">Technical</option>
+                    <option value="creative">Creative</option>
+                    <option value="career">Career</option>
+                    <option value="project">Projects</option>
+                </select>
+
+            </div>
+
+
+            <div class="community-grid">
+
+                <!-- Community 1 -->
+
+                <article
+                    class="community-card"
+                    data-name="Web Development"
+                    data-category="technical"
+                    data-keywords="html css javascript react frontend backend web"
+                >
+                    <div class="community-card-top">
+                        <span class="community-label">TECHNICAL</span>
+                        <span class="community-members">420+ MEMBERS</span>
+                    </div>
+
+                    <h3>Web Development</h3>
+
+                    <p>
+                        Discuss frontend, backend, full-stack development,
+                        frameworks, and practical web projects.
+                    </p>
+
+                    <div class="community-card-bottom">
+                        <span>Active daily</span>
+
+                        <button
+                            class="secondary-button community-view-button"
+                            type="button"
+                            data-community="web-development"
+                        >
+                            VIEW COMMUNITY
+                        </button>
+                    </div>
+                </article>
+
+
+                <!-- Community 2 -->
+
+                <article
+                    class="community-card"
+                    data-name="Python and Backend"
+                    data-category="technical"
+                    data-keywords="python flask django api sql backend database"
+                >
+                    <div class="community-card-top">
+                        <span class="community-label">TECHNICAL</span>
+                        <span class="community-members">310+ MEMBERS</span>
+                    </div>
+
+                    <h3>Python & Backend</h3>
+
+                    <p>
+                        Help students learn Python, APIs, backend frameworks,
+                        databases, and automation.
+                    </p>
+
+                    <div class="community-card-bottom">
+                        <span>Active weekly</span>
+
+                        <button
+                            class="secondary-button community-view-button"
+                            type="button"
+                            data-community="python-backend"
+                        >
+                            VIEW COMMUNITY
+                        </button>
+                    </div>
+                </article>
+
+
+                <!-- Community 3 -->
+
+                <article
+                    class="community-card"
+                    data-name="Design and Creativity"
+                    data-category="creative"
+                    data-keywords="design graphic branding portfolio creativity ui"
+                >
+                    <div class="community-card-top">
+                        <span class="community-label">CREATIVE</span>
+                        <span class="community-members">275+ MEMBERS</span>
+                    </div>
+
+                    <h3>Design & Creativity</h3>
+
+                    <p>
+                        Share creative knowledge related to graphic design,
+                        branding, portfolios, and visual communication.
+                    </p>
+
+                    <div class="community-card-bottom">
+                        <span>Active weekly</span>
+
+                        <button
+                            class="secondary-button community-view-button"
+                            type="button"
+                            data-community="design-creativity"
+                        >
+                            VIEW COMMUNITY
+                        </button>
+                    </div>
+                </article>
+
+
+                <!-- Community 4 -->
+
+                <article
+                    class="community-card"
+                    data-name="Hackathons and Projects"
+                    data-category="project"
+                    data-keywords="hackathon projects teamwork coding competition"
+                >
+                    <div class="community-card-top">
+                        <span class="community-label">PROJECTS</span>
+                        <span class="community-members">530+ MEMBERS</span>
+                    </div>
+
+                    <h3>Hackathons & Projects</h3>
+
+                    <p>
+                        Support students with project ideas, hackathon planning,
+                        teamwork, and technical implementation.
+                    </p>
+
+                    <div class="community-card-bottom">
+                        <span>Highly active</span>
+
+                        <button
+                            class="secondary-button community-view-button"
+                            type="button"
+                            data-community="hackathons"
+                        >
+                            VIEW COMMUNITY
+                        </button>
+                    </div>
+                </article>
+
+
+                <!-- Community 5 -->
+
+                <article
+                    class="community-card"
+                    data-name="Career and Internships"
+                    data-category="career"
+                    data-keywords="career internship resume interview jobs placement"
+                >
+                    <div class="community-card-top">
+                        <span class="community-label">CAREER</span>
+                        <span class="community-members">680+ MEMBERS</span>
+                    </div>
+
+                    <h3>Career & Internships</h3>
+
+                    <p>
+                        Guide students through resumes, interviews, internships,
+                        career planning, and professional growth.
+                    </p>
+
+                    <div class="community-card-bottom">
+                        <span>Active daily</span>
+
+                        <button
+                            class="secondary-button community-view-button"
+                            type="button"
+                            data-community="career-internships"
+                        >
+                            VIEW COMMUNITY
+                        </button>
+                    </div>
+                </article>
+
+
+                <!-- Community 6 -->
+
+                <article
+                    class="community-card"
+                    data-name="Mentorship and Leadership"
+                    data-category="career"
+                    data-keywords="mentorship leadership guidance professional growth"
+                >
+                    <div class="community-card-top">
+                        <span class="community-label">CAREER</span>
+                        <span class="community-members">190+ MEMBERS</span>
+                    </div>
+
+                    <h3>Mentorship & Leadership</h3>
+
+                    <p>
+                        Exchange ideas about mentorship, leadership, communication,
+                        and helping students build confidence.
+                    </p>
+
+                    <div class="community-card-bottom">
+                        <span>Active regularly</span>
+
+                        <button
+                            class="secondary-button community-view-button"
+                            type="button"
+                            data-community="mentorship-leadership"
+                        >
+                            VIEW COMMUNITY
+                        </button>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+
+        <!-- =========================
+             My Apprentice Section
+        ========================== -->
+
+        <section
+            id="my-apprentice"
+            class="dashboard-section"
+            hidden
+        >
+            <p class="eyebrow">GUIDE · SUPPORT · DEVELOP</p>
+
+            <h2 class="section-heading">My Apprentice</h2>
+
+            <p class="section-description">
+                View and manage the student currently assigned to you.
+            </p>
+
+
+            <div class="apprentice-layout">
+
+                <div class="apprentice-profile-card">
+
+                    <div class="apprentice-profile-header">
+                        <div class="large-avatar">AS</div>
+
+                        <div>
+                            <p class="profile-label">CURRENT APPRENTICE</p>
+                            <h3>Arjun Singh</h3>
+                            <p class="profile-subtitle">
+                                Computer Science Student
+                            </p>
+                        </div>
+                    </div>
+
+
+                    <div class="profile-information">
+
+                        <div class="information-item">
+                            <span class="information-label">COLLEGE</span>
+                            <span class="information-value">
+                                National Institute of Technology
+                            </span>
+                        </div>
+
+                        <div class="information-item">
+                            <span class="information-label">INTERESTS</span>
+                            <span class="information-value">
+                                Python · Web Development · APIs
+                            </span>
+                        </div>
+
+                        <div class="information-item">
+                            <span class="information-label">CURRENT GOAL</span>
+                            <span class="information-value">
+                                Build a full-stack project and prepare for internships
+                            </span>
+                        </div>
+
+                        <div class="information-item">
+                            <span class="information-label">MENTORSHIP STATUS</span>
+                            <span class="status-badge">
+                                ACTIVE
+                            </span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="apprentice-actions">
+                        <button
+                            id="messageApprenticeButton"
+                            class="primary-button"
+                            type="button"
+                        >
+                            MESSAGE APPRENTICE
+                        </button>
+
+                        <button
+                            id="viewProgressButton"
+                            class="secondary-button"
+                            type="button"
+                        >
+                            VIEW PROGRESS
+                        </button>
+                    </div>
+
+                </div>
+
+
+                <div class="apprentice-summary-card">
+
+                    <h3>Mentorship Summary</h3>
+
+                    <div class="summary-stat">
+                        <span>Sessions Completed</span>
+                        <strong>6</strong>
+                    </div>
+
+                    <div class="summary-stat">
+                        <span>Projects Discussed</span>
+                        <strong>3</strong>
+                    </div>
+
+                    <div class="summary-stat">
+                        <span>Next Session</span>
+                        <strong>Saturday</strong>
+                    </div>
+
+                    <div class="summary-note">
+                        Keep your apprentice’s goals updated and provide
+                        feedback after every session.
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- =========================
+             Requests Received Section
+        ========================== -->
+
+        <section
+            id="requests"
+            class="dashboard-section"
+            hidden
+        >
+            <p class="eyebrow">REVIEW · ACCEPT · MENTOR</p>
+
+            <h2 class="section-heading">Requests Received</h2>
+
+            <p class="section-description">
+                Review students who have requested your mentorship.
+            </p>
+
+
+            <div class="requests-list">
+
+                <!-- Request 1 -->
+
+                <article
+                    class="request-card"
+                    data-request-id="request-1"
+                >
+                    <div class="request-avatar">RK</div>
+
+                    <div class="request-content">
+                        <div class="request-heading">
+                            <div>
+                                <h3>Riya Kapoor</h3>
+                                <p>Computer Science Student</p>
+                            </div>
+
+                            <span class="request-time">
+                                2 hours ago
+                            </span>
+                        </div>
+
+                        <p class="request-message">
+                            I am looking for guidance in Python, backend development,
+                            and building my first practical project.
+                        </p>
+
+                        <div class="request-tags">
+                            <span>Python</span>
+                            <span>Backend</span>
+                            <span>Projects</span>
+                        </div>
+
+                        <div class="request-actions">
+                            <button
+                                class="primary-button accept-request-button"
+                                type="button"
+                            >
+                                ACCEPT
+                            </button>
+
+                            <button
+                                class="secondary-button decline-request-button"
+                                type="button"
+                            >
+                                DECLINE
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+
+                <!-- Request 2 -->
+
+                <article
+                    class="request-card"
+                    data-request-id="request-2"
+                >
+                    <div class="request-avatar">VM</div>
+
+                    <div class="request-content">
+                        <div class="request-heading">
+                            <div>
+                                <h3>Vikram Mehta</h3>
+                                <p>Information Technology Student</p>
+                            </div>
+
+                            <span class="request-time">
+                                Yesterday
+                            </span>
+                        </div>
+
+                        <p class="request-message">
+                            I would like help improving my resume, preparing for
+                            interviews, and understanding frontend development.
+                        </p>
+
+                        <div class="request-tags">
+                            <span>Frontend</span>
+                            <span>Career</span>
+                            <span>Resume</span>
+                        </div>
+
+                        <div class="request-actions">
+                            <button
+                                class="primary-button accept-request-button"
+                                type="button"
+                            >
+                                ACCEPT
+                            </button>
+
+                            <button
+                                class="secondary-button decline-request-button"
+                                type="button"
+                            >
+                                DECLINE
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+
+                <!-- Request 3 -->
+
+                <article
+                    class="request-card"
+                    data-request-id="request-3"
+                >
+                    <div class="request-avatar">NP</div>
+
+                    <div class="request-content">
+                        <div class="request-heading">
+                            <div>
+                                <h3>Nisha Patel</h3>
+                                <p>Design Student</p>
+                            </div>
+
+                            <span class="request-time">
+                                3 days ago
+                            </span>
+                        </div>
+
+                        <p class="request-message">
+                            I am building a design portfolio and would appreciate
+                            guidance on branding, presentation, and creative direction.
+                        </p>
+
+                        <div class="request-tags">
+                            <span>Design</span>
+                            <span>Branding</span>
+                            <span>Portfolio</span>
+                        </div>
+
+                        <div class="request-actions">
+                            <button
+                                class="primary-button accept-request-button"
+                                type="button"
+                            >
+                                ACCEPT
+                            </button>
+
+                            <button
+                                class="secondary-button decline-request-button"
+                                type="button"
+                            >
+                                DECLINE
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         Community Modal
+    ========================== -->
+
+    <div
+        id="communityModal"
+        class="detail-modal"
+        hidden
+    >
+        <div class="modal-content">
+
+            <button
+                id="closeCommunityModal"
+                class="modal-close"
+                type="button"
+                aria-label="Close community modal"
+            >
+                &times;
+            </button>
+
+            <p
+                id="modalCommunityCategory"
+                class="modal-category"
+            ></p>
+
+            <h2 id="modalCommunityTitle"></h2>
+
+            <p id="modalCommunityDescription"></p>
+
+            <h3>Members</h3>
+            <p id="modalCommunityMembers"></p>
+
+            <h3>Activity</h3>
+            <p id="modalCommunityActivity"></p>
+
+            <h3>Topics</h3>
+
+            <ul
+                id="modalCommunityTopics"
+                class="modal-list"
+            ></ul>
+
+            <div class="modal-footer">
+                <button
+                    id="connectCommunityButton"
+                    class="connect-button"
+                    type="button"
+                >
+                    JOIN COMMUNITY
+                </button>
+            </div>
+
+        </div>
+    </div>
+
+
+    <script src="/frontend/app.js"></script>
+</body>
+</html>

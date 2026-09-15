@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AlumnComi | Hiring Manager Dashboard</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Quantico:wght@400;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="/frontend/css/hhome.css">
+</head>
+<body>
+
+    <!-- =========================
+         Top Navigation
+    ========================== -->
+
+    <header class="top-bar">
+        <h1 class="logo">AlumnComi</h1>
+
+        <nav class="top-links">
+            <a href="#">Company Profile</a>
+            <a href="#">Settings</a>
+            <a href="#">Logout</a>
+        </nav>
+    </header>
+
+
+    <!-- =========================
+         Main Dashboard
+    ========================== -->
+
+    <main class="dashboard-container">
+
+        <!-- Dashboard Navigation -->
+
+        <nav class="dashboard-navigation">
+
+            <button
+                class="dashboard-option active"
+                data-section="internship-opportunities"
+                type="button"
+            >
+                INTERNSHIP OPPORTUNITIES
+            </button>
+
+            <button
+                class="dashboard-option"
+                data-section="project-discovery"
+                type="button"
+            >
+                FIND POTENTIAL INTERNS
+            </button>
+
+        </nav>
+
+
+        <!-- =========================
+             Internship Opportunities
+        ========================== -->
+
+        <section
+            id="internship-opportunities"
+            class="dashboard-section"
+        >
+            <p class="eyebrow">POST · FILTER · DISCOVER TALENT</p>
+
+            <h2 class="section-heading">Internship Opportunities</h2>
+
+            <p class="section-description">
+                Review your internship listings and find applicants based on
+                compatibility, skills, and strengths.
+            </p>
+
+
+            <div class="opportunity-toolbar">
+
+                <input
+                    type="search"
+                    id="internshipSearch"
+                    class="search-input"
+                    placeholder="Search internship opportunities..."
+                >
+
+                <select
+                    id="internshipType"
+                    class="filter-select"
+                >
+                    <option value="all">All Work Types</option>
+                    <option value="remote">Remote</option>
+                    <option value="hybrid">Hybrid</option>
+                    <option value="onsite">On-site</option>
+                </select>
+
+                <select
+                    id="internshipStatus"
+                    class="filter-select"
+                >
+                    <option value="all">All Statuses</option>
+                    <option value="active">Active</option>
+                    <option value="closed">Closed</option>
+                </select>
+
+            </div>
+
+
+            <div class="opportunity-grid">
+
+                <!-- Internship 1 -->
+
+                <article
+                    class="opportunity-card"
+                    data-title="Frontend Development Intern"
+                    data-type="hybrid"
+                    data-status="active"
+                    data-keywords="frontend html css javascript react web development"
+                >
+                    <div class="opportunity-top">
+                        <span class="opportunity-status active-status">
+                            ACTIVE
+                        </span>
+
+                        <span class="opportunity-type">
+                            HYBRID
+                        </span>
+                    </div>
+
+                    <h3>Frontend Development Intern</h3>
+
+                    <p class="opportunity-description">
+                        Work with the product team to build responsive interfaces
+                        and improve the user experience of our web platform.
+                    </p>
+
+                    <div class="opportunity-details">
+                        <span>3 Positions</span>
+                        <span>₹15,000/month</span>
+                        <span>React · JavaScript</span>
+                    </div>
+
+                    <div class="opportunity-footer">
+                        <span class="applicant-count">
+                            12 Applicants
+                        </span>
+
+                        <button
+                            class="primary-button view-applicants-button"
+                            type="button"
+                            data-opportunity="frontend"
+                        >
+                            VIEW APPLICANTS
+                        </button>
+                    </div>
+                </article>
+
+
+                <!-- Internship 2 -->
+
+                <article
+                    class="opportunity-card"
+                    data-title="Python Backend Intern"
+                    data-type="remote"
+                    data-status="active"
+                    data-keywords="python backend flask django api sql database"
+                >
+                    <div class="opportunity-top">
+                        <span class="opportunity-status active-status">
+                            ACTIVE
+                        </span>
+
+                        <span class="opportunity-type">
+                            REMOTE
+                        </span>
+                    </div>
+
+                    <h3>Python Backend Intern</h3>
+
+                    <p class="opportunity-description">
+                        Assist in developing APIs, database systems, and backend
+                        services for internal and customer-facing applications.
+                    </p>
+
+                    <div class="opportunity-details">
+                        <span>2 Positions</span>
+                        <span>₹18,000/month</span>
+                        <span>Python · Flask · SQL</span>
+                    </div>
+
+                    <div class="opportunity-footer">
+                        <span class="applicant-count">
+                            9 Applicants
+                        </span>
+
+                        <button
+                            class="primary-button view-applicants-button"
+                            type="button"
+                            data-opportunity="python"
+                        >
+                            VIEW APPLICANTS
+                        </button>
+                    </div>
+                </article>
+
+
+                <!-- Internship 3 -->
+
+                <article
+                    class="opportunity-card"
+                    data-title="Graphic Design Intern"
+                    data-type="onsite"
+                    data-status="active"
+                    data-keywords="graphic design branding photoshop illustrator creative"
+                >
+                    <div class="opportunity-top">
+                        <span class="opportunity-status active-status">
+                            ACTIVE
+                        </span>
+
+                        <span class="opportunity-type">
+                            ON-SITE
+                        </span>
+                    </div>
+
+                    <h3>Graphic Design Intern</h3>
+
+                    <p class="opportunity-description">
+                        Create visual assets for campaigns, branding projects,
+                        social media, and product communication.
+                    </p>
+
+                    <div class="opportunity-details">
+                        <span>1 Position</span>
+                        <span>₹12,000/month</span>
+                        <span>Photoshop · Branding</span>
+                    </div>
+
+                    <div class="opportunity-footer">
+                        <span class="applicant-count">
+                            16 Applicants
+                        </span>
+
+                        <button
+                            class="primary-button view-applicants-button"
+                            type="button"
+                            data-opportunity="design"
+                        >
+                            VIEW APPLICANTS
+                        </button>
+                    </div>
+                </article>
+
+
+                <!-- Internship 4 -->
+
+                <article
+                    class="opportunity-card"
+                    data-title="Data Analyst Intern"
+                    data-type="remote"
+                    data-status="closed"
+                    data-keywords="data analyst python excel sql statistics analytics"
+                >
+                    <div class="opportunity-top">
+                        <span class="opportunity-status closed-status">
+                            CLOSED
+                        </span>
+
+                        <span class="opportunity-type">
+                            REMOTE
+                        </span>
+                    </div>
+
+                    <h3>Data Analyst Intern</h3>
+
+                    <p class="opportunity-description">
+                        Assist with data cleaning, reporting, dashboard creation,
+                        and basic business analysis.
+                    </p>
+
+                    <div class="opportunity-details">
+                        <span>1 Position</span>
+                        <span>₹14,000/month</span>
+                        <span>Python · SQL · Excel</span>
+                    </div>
+
+                    <div class="opportunity-footer">
+                        <span class="applicant-count">
+                            7 Applicants
+                        </span>
+
+                        <button
+                            class="primary-button view-applicants-button"
+                            type="button"
+                            data-opportunity="data"
+                        >
+                            VIEW APPLICANTS
+                        </button>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+
+        <!-- =========================
+             Project Discovery
+        ========================== -->
+
+        <section
+            id="project-discovery"
+            class="dashboard-section"
+            hidden
+        >
+            <p class="eyebrow">EXPLORE · EVALUATE · RECRUIT</p>
+
+            <h2 class="section-heading">Find Potential Interns</h2>
+
+            <p class="section-description">
+                Discover student projects and identify candidates based on
+                demonstrated skills rather than just resumes.
+            </p>
+
+
+            <div class="project-toolbar">
+
+                <input
+                    type="search"
+                    id="projectSearch"
+                    class="search-input"
+                    placeholder="Search projects, students, or technologies..."
+                >
+
+                <select
+                    id="projectCategory"
+                    class="filter-select"
+                >
+                    <option value="all">All Categories</option>
+                    <option value="web">Web Development</option>
+                    <option value="backend">Backend</option>
+                    <option value="ai">AI and Data</option>
+                    <option value="design">Design</option>
+                    <option value="mobile">Mobile</option>
+                </select>
+
+                <select
+                    id="projectSkill"
+                    class="filter-select"
+                >
+                    <option value="all">All Skills</option>
+                    <option value="python">Python</option>
+                    <option value="javascript">JavaScript</option>
+                    <option value="react">React</option>
+                    <option value="sql">SQL</option>
+                    <option value="design">Design</option>
+                </select>
+
+            </div>
+
+
+            <div class="project-grid">
+
+                <!-- Project 1 -->
+
+                <article
+                    class="project-card"
+                    data-title="Campus Connect"
+                    data-student="Aarav Sharma"
+                    data-category="web"
+                    data-skills="javascript react html css"
+                    data-keywords="student community platform web frontend react javascript"
+                >
+                    <div class="project-card-top">
+                        <span class="project-category">WEB DEVELOPMENT</span>
+                        <span class="project-year">2026</span>
+                    </div>
+
+                    <h3>Campus Connect</h3>
+
+                    <p class="project-student">
+                        By Aarav Sharma
+                    </p>
+
+                    <p class="project-description">
+                        A student networking platform with community discussions,
+                        profiles, and event discovery.
+                    </p>
+
+                    <div class="skill-tags">
+                        <span>React</span>
+                        <span>JavaScript</span>
+                        <span>CSS</span>
+                    </div>
+
+                    <div class="project-card-footer">
+                        <span class="project-score">
+                            Project Score: <strong>91%</strong>
+                        </span>
+
+                        <button
+                            class="secondary-button view-project-button"
+                            type="button"
+                            data-project="campus-connect"
+                        >
+                            VIEW PROJECT
+                        </button>
+                    </div>
+                </article>
+
+
+                <!-- Project 2 -->
+
+                <article
+                    class="project-card"
+                    data-title="MedLedger"
+                    data-student="Neha Verma"
+                    data-category="backend"
+                    data-skills="python sql backend"
+                    data-keywords="medical ledger privacy blockchain python backend database"
+                >
+                    <div class="project-card-top">
+                        <span class="project-category">BACKEND</span>
+                        <span class="project-year">2026</span>
+                    </div>
+
+                    <h3>MedLedger</h3>
+
+                    <p class="project-student">
+                        By Neha Verma
+                    </p>
+
+                    <p class="project-description">
+                        A privacy-focused medical record access system with
+                        consent-based data sharing and audit records.
+                    </p>
+
+                    <div class="skill-tags">
+                        <span>Python</span>
+                        <span>SQL</span>
+                        <span>Backend</span>
+                    </div>
+
+                    <div class="project-card-footer">
+                        <span class="project-score">
+                            Project Score: <strong>94%</strong>
+                        </span>
+
+                        <button
+                            class="secondary-button view-project-button"
+                            type="button"
+                            data-project="medledger"
+                        >
+                            VIEW PROJECT
+                        </button>
+                    </div>
+                </article>
+
+
+                <!-- Project 3 -->
+
+                <article
+                    class="project-card"
+                    data-title="StudyLens"
+                    data-student="Kabir Nair"
+                    data-category="ai"
+                    data-skills="python sql"
+                    data-keywords="ai data python study analytics machine learning sql"
+                >
+                    <div class="project-card-top">
+                        <span class="project-category">AI AND DATA</span>
+                        <span class="project-year">2026</span>
+                    </div>
+
+                    <h3>StudyLens</h3>
+
+                    <p class="project-student">
+                        By Kabir Nair
+                    </p>
+
+                    <p class="project-description">
+                        A learning analytics tool that tracks study patterns
+                        and generates personalized performance reports.
+                    </p>
+
+                    <div class="skill-tags">
+                        <span>Python</span>
+                        <span>SQL</span>
+                        <span>Analytics</span>
+                    </div>
+
+                    <div class="project-card-footer">
+                        <span class="project-score">
+                            Project Score: <strong>87%</strong>
+                        </span>
+
+                        <button
+                            class="secondary-button view-project-button"
+                            type="button"
+                            data-project="studylens"
+                        >
+                            VIEW PROJECT
+                        </button>
+                    </div>
+                </article>
+
+
+                <!-- Project 4 -->
+
+                <article
+                    class="project-card"
+                    data-title="BrandBoard"
+                    data-student="Maya Iyer"
+                    data-category="design"
+                    data-skills="design"
+                    data-keywords="branding graphic design portfolio visual identity photoshop"
+                >
+                    <div class="project-card-top">
+                        <span class="project-category">DESIGN</span>
+                        <span class="project-year">2026</span>
+                    </div>
+
+                    <h3>BrandBoard</h3>
+
+                    <p class="project-student">
+                        By Maya Iyer
+                    </p>
+
+                    <p class="project-description">
+                        A branding case-study collection featuring identity
+                        systems, packaging, and campaign design.
+                    </p>
+
+                    <div class="skill-tags">
+                        <span>Branding</span>
+                        <span>Design</span>
+                        <span>Packaging</span>
+                    </div>
+
+                    <div class="project-card-footer">
+                        <span class="project-score">
+                            Project Score: <strong>90%</strong>
+                        </span>
+
+                        <button
+                            class="secondary-button view-project-button"
+                            type="button"
+                            data-project="brandboard"
+                        >
+                            VIEW PROJECT
+                        </button>
+                    </div>
+                </article>
+
+
+                <!-- Project 5 -->
+
+                <article
+                    class="project-card"
+                    data-title="Pocket Planner"
+                    data-student="Dev Malhotra"
+                    data-category="mobile"
+                    data-skills="javascript react"
+                    data-keywords="mobile app react javascript planner productivity"
+                >
+                    <div class="project-card-top">
+                        <span class="project-category">MOBILE</span>
+                        <span class="project-year">2026</span>
+                    </div>
+
+                    <h3>Pocket Planner</h3>
+
+                    <p class="project-student">
+                        By Dev Malhotra
+                    </p>
+
+                    <p class="project-description">
+                        A productivity application for managing tasks, reminders,
+                        and personal academic schedules.
+                    </p>
+
+                    <div class="skill-tags">
+                        <span>React</span>
+                        <span>JavaScript</span>
+                        <span>Mobile</span>
+                    </div>
+
+                    <div class="project-card-footer">
+                        <span class="project-score">
+                            Project Score: <strong>84%</strong>
+                        </span>
+
+                        <button
+                            class="secondary-button view-project-button"
+                            type="button"
+                            data-project="pocket-planner"
+                        >
+                            VIEW PROJECT
+                        </button>
+                    </div>
+                </article>
+
+
+                <!-- Project 6 -->
+
+                <article
+                    class="project-card"
+                    data-title="Inventory Lite"
+                    data-student="Ishita Rao"
+                    data-category="backend"
+                    data-skills="python sql"
+                    data-keywords="inventory management python sql database backend stock"
+                >
+                    <div class="project-card-top">
+                        <span class="project-category">BACKEND</span>
+                        <span class="project-year">2026</span>
+                    </div>
+
+                    <h3>Inventory Lite</h3>
+
+                    <p class="project-student">
+                        By Ishita Rao
+                    </p>
+
+                    <p class="project-description">
+                        A lightweight inventory management system for tracking
+                        stock, sales, and product records.
+                    </p>
+
+                    <div class="skill-tags">
+                        <span>Python</span>
+                        <span>SQL</span>
+                        <span>Database</span>
+                    </div>
+
+                    <div class="project-card-footer">
+                        <span class="project-score">
+                            Project Score: <strong>88%</strong>
+                        </span>
+
+                        <button
+                            class="secondary-button view-project-button"
+                            type="button"
+                            data-project="inventory-lite"
+                        >
+                            VIEW PROJECT
+                        </button>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         Applicants Modal
+    ========================== -->
+
+    <div
+        id="applicantsModal"
+        class="detail-modal"
+        hidden
+    >
+        <div class="modal-content applicants-modal-content">
+
+            <button
+                id="closeApplicantsModal"
+                class="modal-close"
+                type="button"
+                aria-label="Close applicants modal"
+            >
+                &times;
+            </button>
+
+            <p class="modal-category">INTERNSHIP APPLICANTS</p>
+
+            <h2 id="modalOpportunityTitle">
+                Applicants
+            </h2>
+
+            <p class="modal-description">
+                Applicants are ranked using a compatibility estimate based on
+                the opportunity requirements and submitted student information.
+            </p>
+
+            <div
+                id="applicantsList"
+                class="applicants-list"
+            ></div>
+
+        </div>
+    </div>
+
+
+    <!-- =========================
+         Project Modal
+    ========================== -->
+
+    <div
+        id="projectModal"
+        class="detail-modal"
+        hidden
+    >
+        <div class="modal-content">
+
+            <button
+                id="closeProjectModal"
+                class="modal-close"
+                type="button"
+                aria-label="Close project modal"
+            >
+                &times;
+            </button>
+
+            <p
+                id="modalProjectCategory"
+                class="modal-category"
+            ></p>
+
+            <h2 id="modalProjectTitle"></h2>
+
+            <p
+                id="modalProjectStudent"
+                class="modal-project-student"
+            ></p>
+
+            <p
+                id="modalProjectDescription"
+                class="modal-description"
+            ></p>
+
+            <h3>Demonstrated Skills</h3>
+
+            <div
+                id="modalProjectSkills"
+                class="skill-tags modal-skills"
+            ></div>
+
+            <h3>Project Evaluation</h3>
+
+            <p id="modalProjectEvaluation"></p>
+
+            <div class="modal-footer">
+                <button
+                    id="contactStudentButton"
+                    class="connect-button"
+                    type="button"
+                >
+                    CONTACT STUDENT
+                </button>
+            </div>
+
+        </div>
+    </div>
+
+
+    <script src="/frontend/app.js"></script>
+</body>
+</html>

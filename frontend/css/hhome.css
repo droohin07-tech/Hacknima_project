@@ -1,0 +1,747 @@
+@import url("https://fonts.googleapis.com/css2?family=Quantico:wght@400;700&display=swap");
+
+/* =========================
+   Root Variables
+========================= */
+
+:root {
+    --olive: #554f14;
+    --background: #fdfcf8;
+    --white: #ffffff;
+    --black: #000000;
+    --border: #d8d6ca;
+    --soft-border: #e7e5dc;
+    --shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+}
+
+/* =========================
+   Reset
+========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: #fdfcf8;
+    color: #000000;
+    font-family: "Quantico", sans-serif;
+}
+
+button,
+input,
+select {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+button:focus-visible,
+input:focus-visible,
+select:focus-visible {
+    outline: 2px solid #554f14;
+    outline-offset: 2px;
+}
+
+a {
+    color: #000000;
+    text-decoration: none;
+}
+
+/* =========================
+   Top Navigation
+========================= */
+
+.top-bar {
+    width: 100%;
+    min-height: 70px;
+    padding: 20px 28px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    border-bottom: 1px solid var(--soft-border);
+    background: #fdfcf8;
+}
+
+.logo {
+    margin: 0;
+    color: #554f14;
+    font-size: 17px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.top-links {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+.top-links a {
+    color: #000000;
+    font-size: 12px;
+    transition: color 0.2s ease;
+}
+
+.top-links a:hover {
+    color: #554f14;
+}
+
+/* =========================
+   Dashboard Layout
+========================= */
+
+.dashboard-container {
+    width: min(1400px, 88%);
+    margin: 0 auto;
+    padding: 36px 0 70px;
+}
+
+.dashboard-navigation {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 44px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--soft-border);
+}
+
+.dashboard-option {
+    padding: 13px 20px;
+    border: 1px solid #000000;
+    border-radius: 6px;
+    background: transparent;
+    color: #000000;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.dashboard-option:hover,
+.dashboard-option.active {
+    border-color: #554f14;
+    background: #554f14;
+    color: #ffffff;
+}
+
+.dashboard-section {
+    display: block;
+}
+
+.dashboard-section[hidden] {
+    display: none;
+}
+
+/* =========================
+   Typography
+========================= */
+
+.eyebrow {
+    margin: 0 0 26px;
+    color: #000000;
+    font-size: 12px;
+    letter-spacing: 0.6px;
+}
+
+.section-heading {
+    margin: 0 0 12px;
+    color: #000000;
+    font-size: clamp(27px, 3vw, 38px);
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.section-description {
+    margin: 0 0 28px;
+    color: #000000;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+/* =========================
+   Buttons
+========================= */
+
+.primary-button,
+.secondary-button {
+    min-height: 40px;
+    padding: 11px 17px;
+    border-radius: 6px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.primary-button {
+    border: 1px solid #554f14;
+    background: #554f14;
+    color: #ffffff;
+}
+
+.primary-button:hover {
+    background: #554f14;
+    transform: translateY(-2px);
+}
+
+.secondary-button {
+    border: 1px solid #000000;
+    background: transparent;
+    color: #000000;
+}
+
+.secondary-button:hover {
+    border-color: #554f14;
+    background: #554f14;
+    color: #ffffff;
+}
+
+/* =========================
+   Inputs
+========================= */
+
+.search-input,
+.filter-select {
+    width: 100%;
+    min-height: 42px;
+    padding: 10px 12px;
+    border: 1px solid #000000;
+    border-radius: 4px;
+    outline: none;
+    background: #ffffff;
+    color: #000000;
+    font-size: 12px;
+}
+
+.search-input::placeholder {
+    color: #555555;
+}
+
+.search-input:focus,
+.filter-select:focus {
+    border-color: #554f14;
+    box-shadow: 0 0 0 2px rgba(85, 79, 20, 0.12);
+}
+
+/* =========================
+   Internship Toolbar
+========================= */
+
+.opportunity-toolbar,
+.project-toolbar {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 210px 210px;
+    gap: 14px;
+    margin-bottom: 28px;
+}
+
+/* =========================
+   Internship Opportunities
+========================= */
+
+.opportunity-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.opportunity-card {
+    display: flex;
+    flex-direction: column;
+    min-height: 330px;
+    padding: 24px;
+    border: 1px solid var(--border);
+    border-radius: 9px;
+    background: #ffffff;
+    box-shadow: var(--shadow);
+}
+
+.opportunity-card[style*="display: none"] {
+    display: none !important;
+}
+
+.opportunity-top,
+.project-card-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.opportunity-status,
+.opportunity-type,
+.project-category,
+.project-year {
+    font-size: 10px;
+    letter-spacing: 0.4px;
+}
+
+.active-status,
+.project-category {
+    color: #554f14;
+    font-weight: 700;
+}
+
+.closed-status {
+    color: #000000;
+    font-weight: 700;
+}
+
+.opportunity-type,
+.project-year {
+    color: #000000;
+}
+
+.opportunity-card h3,
+.project-card h3 {
+    margin: 0 0 16px;
+    color: #000000;
+    font-size: 19px;
+    line-height: 1.45;
+}
+
+.opportunity-description,
+.project-description {
+    margin: 0 0 22px;
+    color: #000000;
+    font-size: 11px;
+    line-height: 1.8;
+}
+
+.opportunity-details {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 16px 0;
+    border-top: 1px solid var(--soft-border);
+    border-bottom: 1px solid var(--soft-border);
+}
+
+.opportunity-details span {
+    color: #000000;
+    font-size: 10px;
+}
+
+.opportunity-footer,
+.project-card-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: auto;
+    padding-top: 22px;
+}
+
+.applicant-count,
+.project-score {
+    color: #000000;
+    font-size: 10px;
+}
+
+.project-score strong {
+    color: #554f14;
+}
+
+/* =========================
+   Project Discovery
+========================= */
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.project-card {
+    display: flex;
+    flex-direction: column;
+    min-height: 325px;
+    padding: 24px;
+    border: 1px solid var(--border);
+    border-radius: 9px;
+    background: #ffffff;
+    box-shadow: var(--shadow);
+}
+
+.project-student {
+    margin: -5px 0 18px;
+    color: #554f14;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.skill-tags span {
+    padding: 7px 10px;
+    border: 1px solid #000000;
+    border-radius: 4px;
+    color: #000000;
+    font-size: 10px;
+}
+
+.project-card-footer {
+    border-top: 1px solid var(--soft-border);
+}
+
+.view-project-button {
+    font-size: 10px;
+}
+
+/* =========================
+   Modal
+========================= */
+
+.detail-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    background: rgba(0, 0, 0, 0.55);
+}
+
+.detail-modal[hidden] {
+    display: none !important;
+}
+
+.modal-content {
+    position: relative;
+    width: min(600px, 100%);
+    max-height: 90vh;
+    overflow-y: auto;
+    padding: 30px;
+    border: 1px solid #d8d6ca;
+    border-radius: 10px;
+    background: #fdfcf8;
+    color: #000000;
+    box-shadow: 0 18px 50px rgba(0, 0, 0, 0.2);
+}
+
+.modal-close {
+    position: absolute;
+    top: 13px;
+    right: 18px;
+    border: none;
+    background: transparent;
+    color: #000000;
+    font-size: 25px;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.modal-category {
+    margin: 0 0 10px;
+    color: #554f14;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.modal-content h2 {
+    margin: 0 0 17px;
+    color: #000000;
+    font-size: 24px;
+    line-height: 1.4;
+}
+
+.modal-content h3 {
+    margin: 24px 0 10px;
+    color: #000000;
+    font-size: 14px;
+}
+
+.modal-description,
+.modal-content p {
+    color: #000000;
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+.modal-project-student {
+    margin: -5px 0 18px;
+    color: #554f14 !important;
+    font-weight: 700;
+}
+
+.modal-footer {
+    margin-top: 28px;
+}
+
+.connect-button {
+    width: 100%;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 25%;
+    background: #554f14;
+    color: #fdfcf8;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.7px;
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+.connect-button:hover {
+    background: #554f14;
+    transform: translateY(-2px);
+}
+
+.connect-button.connected {
+    background: #000000;
+    color: #ffffff;
+}
+
+/* =========================
+   Applicants
+========================= */
+
+.applicants-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 25px;
+}
+
+.applicant-card {
+    padding: 20px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: #ffffff;
+}
+
+.applicant-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 18px;
+    margin-bottom: 16px;
+}
+
+.applicant-name-area {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+}
+
+.applicant-avatar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 auto;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: #554f14;
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.applicant-name-area h3 {
+    margin: 0 0 6px;
+    font-size: 15px;
+}
+
+.applicant-name-area p {
+    margin: 0;
+    color: #000000;
+    font-size: 10px;
+}
+
+.match-percentage {
+    color: #554f14;
+    font-size: 19px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.match-label {
+    display: block;
+    margin-top: 3px;
+    color: #000000;
+    font-size: 9px;
+    font-weight: 400;
+    text-align: right;
+}
+
+.match-bar {
+    width: 100%;
+    height: 7px;
+    margin-bottom: 17px;
+    overflow: hidden;
+    border-radius: 10px;
+    background: #e7e5dc;
+}
+
+.match-bar-fill {
+    height: 100%;
+    border-radius: inherit;
+    background: #554f14;
+}
+
+.applicant-section-label {
+    display: block;
+    margin-bottom: 8px;
+    color: #554f14;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.4px;
+}
+
+.applicant-strengths {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 17px;
+}
+
+.applicant-strengths span {
+    padding: 6px 9px;
+    border: 1px solid #000000;
+    border-radius: 4px;
+    color: #000000;
+    font-size: 10px;
+}
+
+.applicant-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.applicant-actions button {
+    flex: 1;
+    min-width: 130px;
+}
+
+/* =========================
+   Responsive Design
+========================= */
+
+@media (max-width: 1150px) {
+    .opportunity-grid,
+    .project-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .opportunity-toolbar,
+    .project-toolbar {
+        grid-template-columns: minmax(0, 1fr) 1fr;
+    }
+
+    .opportunity-toolbar .search-input,
+    .project-toolbar .search-input {
+        grid-column: 1 / -1;
+    }
+}
+
+@media (max-width: 800px) {
+    .top-bar {
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 22px 6%;
+    }
+
+    .top-links {
+        gap: 14px;
+    }
+
+    .opportunity-toolbar,
+    .project-toolbar {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .opportunity-grid,
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .opportunity-footer,
+    .project-card-footer {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .opportunity-footer button,
+    .project-card-footer button {
+        width: 100%;
+    }
+
+    .applicant-header {
+        flex-direction: column;
+    }
+
+    .match-label {
+        text-align: left;
+    }
+}
+
+@media (max-width: 550px) {
+    .dashboard-container {
+        width: 90%;
+        padding-top: 26px;
+    }
+
+    .dashboard-navigation {
+        flex-direction: column;
+    }
+
+    .dashboard-option {
+        width: 100%;
+        text-align: left;
+    }
+
+    .opportunity-card,
+    .project-card,
+    .modal-content {
+        padding: 20px;
+    }
+
+    .detail-modal {
+        padding: 12px;
+    }
+
+    .applicant-card {
+        padding: 16px;
+    }
+
+    .applicant-actions {
+        flex-direction: column;
+    }
+
+    .applicant-actions button {
+        width: 100%;
+    }
+}
