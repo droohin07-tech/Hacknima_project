@@ -1,0 +1,10 @@
+Flask
+Flask-Cors
+python-dotenv
+Werkzeug
+rapidfuzz
+requests
+PyPDF2
+python-docx
+beautifulsoup4
+GitPython

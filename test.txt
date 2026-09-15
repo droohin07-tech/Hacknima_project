@@ -1,0 +1,11 @@
+Name: Test Student
+Email: test@student.com
+Password: test123
+
+Name: Test Mentor
+Email: testmentor@gmail.com
+Password: test123456
+
+Name: Test Hiring Manager
+Email: testhiring@gmail.com
+Password: test123456
